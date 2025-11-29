@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Black Dog Balades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase v10 en mode COMPAT (adapté à ce projet) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- Configuration Firebase (à remplir avec TES valeurs) -->
+  <script src="firebase-config.js"></script>
+
+  <!-- Script principal -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <section id="screen-auth" class="screen active">
+      <div class="card auth-card">
+        <h1>Black Dog BALADES</h1>
+        <p class="subtitle">— Pour vous rendre meilleur avec votre chien —</p>
+
+        <p class="rules-title">2 règles :</p>
+        <ul class="rules">
+          <li>Bienveillance entre vous</li>
+          <li>Et amusez-vous ! 🐾</li>
+        </ul>
+
+        <div id="auth-forms">
+          <input id="email" type="email" placeholder="Email" autocomplete="email" />
+          <input id="password" type="password" placeholder="Mot de passe" autocomplete="current-password" />
+          <button id="login-btn" class="btn primary">Se connecter</button>
+          <button id="register-btn" class="btn ghost">Créer un compte</button>
+        </div>
+
+        <p id="auth-message" class="message"></p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
