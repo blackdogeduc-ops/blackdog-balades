@@ -1,12 +1,10 @@
-// IMPORTANT : remplis ces valeurs avec les infos de ton projet Firebase.
-// Tu les trouves dans la console Firebase > Paramètres du projet > Config SDK Web.
 const firebaseConfig = {
-  apiKey: "A_REMPLACER",
-  authDomain: "A_REMPLACER.firebaseapp.com",
-  projectId: "A_REMPLACER",
-  storageBucket: "A_REMPLACER.appspot.com",
-  messagingSenderId: "A_REMPLACER",
-  appId: "A_REMPLACER"
+  apiKey: "AIzaSyC2R0kZ0YH4KL02_ag0FUEIGSLBLxZnkc",
+  authDomain: "black-dog-balades.firebaseapp.com",
+  projectId: "black-dog-balades",
+  storageBucket: "black-dog-balades.firebasestorage.app",
+  messagingSenderId: "225264690589",
+  appId: "1:225264690589:web:1c33a454b5e94b95d497be"
 };
 
 firebase.initializeApp(firebaseConfig);
