@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Black Dog Balades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Écran connexion -->
+    <section id="screen-auth" class="screen active">
+      <div class="card auth-card">
+        <h1>Black Dog BALADES</h1>
+        <p class="subtitle">— Pour vous rendre meilleur avec votre chien —</p>
+        <p class="rules-title">2 règles :</p>
+        <ul class="rules">
+          <li>Bienveillance entre vous</li>
+          <li>Et amusez-vous ! 🐾</li>
+        </ul>
+
+        <div id="auth-forms">
+          <input id="auth-email" type="email" placeholder="Email" />
+          <input id="auth-password" type="password" placeholder="Mot de passe" />
+          <button id="btn-login" class="btn primary">Se connecter</button>
+          <button id="btn-register" class="btn ghost">Créer un compte</button>
+          <p id="auth-message" class="message"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barre de navigation -->
+    <nav id="main-nav" class="nav hidden">
+      <button data-target="screen-home" class="nav-btn active">Accueil</button>
+      <button data-target="screen-slots" class="nav-btn">Mes disponibilités</button>
+      <button data-target="screen-profile" class="nav-btn">Mon profil</button>
+      <button data-target="screen-groups" class="nav-btn">Mes groupes</button>
+      <button id="btn-admin-nav" data-target="screen-admin" class="nav-btn admin-only hidden">Admin</button>
+      <button id="btn-logout" class="nav-btn danger">Quitter</button>
+    </nav>
+
+    <!-- Accueil -->
+    <section id="screen-home" class="screen hidden">
+      <div class="card">
+        <h2>Bienvenue sur Black Dog BALADES</h2>
+        <p class="subtitle">— Pour vous rendre meilleur avec votre chien —</p>
+        <p class="rules-title">2 règles :</p>
+        <ul class="rules">
+          <li>Bienveillance entre vous</li>
+          <li>Et amusez-vous ! 🐾</li>
+        </ul>
+        <p id="home-user-info"></p>
+        <p id="home-approval-warning" class="warning hidden">
+          Ton compte est en attente de validation par l'admin.
+          Tu peux déjà te connecter, mais certaines fonctions seront limitées.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mes disponibilités -->
+    <section id="screen-slots" class="screen hidden">
+      <div class="card">
+        <h2>Mes disponibilités</h2>
+        <p>Sélectionne tes créneaux de balade pour la semaine en cours.</p>
+        <div id="week-container" class="week-grid">
+          <!-- Grille jours x créneaux générée par JS -->
+        </div>
+        <p class="info-text">
+          Tu peux modifier tes créneaux jusqu'à 12h avant l'horaire de la balade.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mon profil -->
+    <section id="screen-profile" class="screen hidden">
+      <div class="card">
+        <h2>Mon profil & mon chien</h2>
+        <div id="profile-dog">
+          <!-- Rempli par JS -->
+        </div>
+        <h3>Chiens compatibles</h3>
+        <div id="compatible-dogs" class="list">
+          <!-- Rempli par JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Mes groupes -->
+    <section id="screen-groups" class="screen hidden">
+      <div class="card">
+        <h2>Mes groupes de balade</h2>
+        <div id="groups-list" class="list">
+          <!-- Liste des groupes -->
+        </div>
+        <div id="chat-section" class="chat hidden">
+          <h3>Discussion du groupe</h3>
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-row">
+            <input id="chat-input" type="text" placeholder="Écris un message..." />
+            <button id="chat-send" class="btn primary">Envoyer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin -->
+    <section id="screen-admin" class="screen hidden">
+      <div class="card">
+        <h2>Espace admin</h2>
+        <h3>Utilisateurs en attente</h3>
+        <div id="admin-pending-users" class="list"></div>
+        <h3>Chiens</h3>
+        <div id="admin-dogs" class="list"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
