@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang='fr'>
+<html lang="fr">
 <head>
-<meta charset='UTF-8'>
-<title>Black Dog Balades - Connexion</title>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<link rel='stylesheet' href='style.css'>
+    <meta charset="UTF-8">
+    <title>Black Dog Balades - Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<script src='https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js'></script>
-<script src='https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js'></script>
-<script src='https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js'></script>
+    <!-- Firebase v10 compat -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
-<script src='firebase.config.js'></script>
-<script src='script.js' defer></script>
+    <!-- Ton fichier config Firebase -->
+    <script src="firebase-config.js"></script>
+
+    <!-- Script logique -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-<div class='card'>
-<h1>BLACK DOG BALADES</h1>
-<p class='sub'>— Pour vous rendre meilleur avec votre chien —</p>
+    <div class="card">
+        <h1>BLACK DOG BALADES</h1>
+        <p class="sub">— Pour vous rendre meilleur avec votre chien —</p>
+        
+        <h3>2 règles :</h3>
+        <ul>
+            <li>Bienveillance entre vous</li>
+            <li>Amusez-vous ! 🐾</li>
+        </ul>
 
-<h3>2 règles :</h3>
-<ul>
-<li>Bienveillance entre vous</li>
-<li>Amusez‑vous ! 🐾</li>
-</ul>
+        <input id="email" type="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Mot de passe">
 
-<input id='email' placeholder='Email'>
-<input id='password' type='password' placeholder='Mot de passe'>
+        <button id="login-btn">Se connecter</button>
+        <button id="signup-btn" class="outline">Créer un compte</button>
 
-<button id='login-btn'>Se connecter</button>
-<button id='signup-btn' class='outline'>Créer un compte</button>
-
-<p id='message'></p>
-</div>
+        <p id="message"></p>
+    </div>
 </body>
 </html>
