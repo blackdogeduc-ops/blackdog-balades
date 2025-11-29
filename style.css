@@ -1,0 +1,42 @@
+body {
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+.card{
+    background:#222;
+    padding:30px;
+    border-radius:20px;
+    width:350px;
+}
+input{
+    width:100%;
+    margin:8px 0;
+    padding:10px;
+    border-radius:10px;
+    border:none;
+}
+.btn{
+    width:100%;
+    padding:10px;
+    background:orange;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+    font-weight:bold;
+}
+.btn-outline{
+    width:100%;
+    padding:10px;
+    border:2px solid orange;
+    background:none;
+    border-radius:10px;
+    margin-top:10px;
+    color:orange;
+    font-weight:bold;
+}
+.error{ color:red; margin-top:10px; }
