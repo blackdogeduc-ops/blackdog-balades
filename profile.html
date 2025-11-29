@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+<meta charset='UTF-8'>
+<title>Profil</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='stylesheet' href='style.css'>
+
+<script src='https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js'></script>
+<script src='https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js'></script>
+<script src='https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js'></script>
+
+<script src='firebase-config.js'></script>
+<script src='profile.js' defer></script>
+</head>
+
+<body>
+<div class='card'>
+<h1>Profil</h1>
+
+<p>Email :</p>
+<p id='email'></p>
+
+<button onclick="window.location.href='home.html'">Retour</button>
+<button id='logout'>Se déconnecter</button>
+</div>
+</body>
+</html>
