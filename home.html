@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Accueil</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="firebase-config.js"></script>
+</head>
+<body>
+<h1>Bienvenue !</h1>
+<p>Vous êtes connecté 🎉</p>
+<button onclick="firebase.auth().signOut().then(()=>location='index.html')">Se déconnecter</button>
+</body>
+</html>
