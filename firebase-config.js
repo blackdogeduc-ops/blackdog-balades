@@ -1,4 +1,3 @@
-// ⚠️ Mets tes vraies infos Firebase ici
 const firebaseConfig = {
     apiKey: "AIZaSyC2R0kZOYH4KL02_ag0FUEIGSLBLxZnKc",
     authDomain: "black-dog-balades.firebaseapp.com",
